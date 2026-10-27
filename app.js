@@ -102,7 +102,7 @@
     const connect = [contact.instagram && `<a href="${esc(contact.instagram)}" target="_blank" rel="noopener">Instagram</a>`, contact.store && `<a href="${esc(contact.store)}" target="_blank" rel="noopener">Store</a>`, contact.email && `<a href="mailto:${esc(contact.email)}">Email</a>`, contact.whatsapp && `<a href="https://wa.me/${esc(contact.whatsapp)}" target="_blank" rel="noopener">WhatsApp</a>`].filter(Boolean);
     const pol = Object.entries({refund: 'Refund policy', terms: 'Terms', privacy: 'Privacy'}).filter(([k]) => C.policies?.[k]).map(([k, t]) => `<a href="${esc(C.policies[k])}">${t}</a>`).join(' · ');
     $('#footer').innerHTML = `<div class="container footer-top"><div class="footer-intro">${lockup}<p>Fashion education & creative studio.</p></div>
-      <div class="footer-col"><h4>Learn</h4>${link('3D Fashion Design', 'course-3d', '')}${link('AI Fashion Illustration', 'course-ai', '')}${link('The book', 'book', '')}${link('Mentorship', 'mentorship', '')}</div>
+      <div class="footer-col"><h4>Learn</h4>${link('3D Fashion Design', 'course-3d', '')}${link('AI Fashion Film', 'course-ai', '')}${link('The book', 'book', '')}${link('Mentorship', 'mentorship', '')}</div>
       <div class="footer-col"><h4>Studio</h4>${link('Portfolio', 'portfolio', '')}${link('Hire me', 'hire', '')}<a href="#sample" data-action="sample">Free book sample</a></div>
       ${connect.length ? `<div class="footer-col"><h4>Connect</h4>${connect.join('')}</div>` : ''}</div>
       <div class="container"><span class="footer-mark" aria-hidden="true">NASARA</span></div>
@@ -216,7 +216,7 @@
   function project(id) {
     const i = Math.max(0, works.findIndex(w => w.id === id)), w = works[i], next = works[(i + 1) % works.length];
     const list = mediaOf(w);
-    const learn = w.kind === '3D' ? ['course-3d', '3D Fashion Design course'] : w.kind === 'AI' ? ['course-ai', 'AI Fashion Illustration course'] : ['book', 'Fashion Illustration book'];
+    const learn = w.kind === '3D' ? ['course-3d', '3D Fashion Design course'] : w.kind === 'AI' ? ['course-ai', 'AI Fashion Film course'] : ['book', 'Fashion Illustration book'];
     const panel = `${link('← Portfolio', 'portfolio', 'back')}<span class="eyebrow">${w.kind}</span><h1>${esc(w.title)}</h1><p class="small" style="margin:-6px 0 32px">${metaOf(w)}</p>
       <div class="actions">${link(`Commission similar work ${arrow}`, 'hire', 'button')}</div>
       ${thumbs(list, 'pdp-show')}

@@ -78,7 +78,7 @@ window.NASARA_CONFIG = (() => {
         preview: film('vid-3')
       },
       'course-ai': {
-        title: 'AI Fashion Illustration', kind: 'Online course', price: 120000,
+        title: 'AI Fashion Film', kind: 'Online course', price: 120000,
         buyUrl: '',
         image: 'media/poster/ai-woman-smiling-and-walking-forward-202607212317-3.jpg', hover: film('ai-hf-20260722-143520-0fd78dec-41d4-48dd-b25e-d434a'),
         description: 'Develop fashion concepts with AI, from still to motion.',
